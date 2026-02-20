@@ -15,7 +15,7 @@ from tqdm import tqdm
 
 url = "https://wallex.ir/price/btc"         # i used from wallex website 
 answer = input("you want price of bitcoin (y/n) \U0001F600 ?")
-if answer == "y" or "Y" :
+if answer == ("y") or answer == ("Y") :
     while True :
         try :
             response = requests.get(url)
