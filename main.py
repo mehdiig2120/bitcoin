@@ -15,7 +15,7 @@ from tqdm import tqdm
 
 url = "https://wallex.ir/price/btc"         # i used from wallex website 
 answer = input("you want price of bitcoin (y/n) \U0001F600 ?")
-if answer == "y" :
+if answer == "y" or "Y" :
     while True :
         try :
             response = requests.get(url)
@@ -31,9 +31,9 @@ if answer == "y" :
 
                 print(f'price of bitcoin : {price} Toman ')
                 answer2 = input("show again ? (y/n)")
-                if answer2 == "y":
+                if answer2 == ("y")  or  answer2 == ("Y")  :
                     pass
-                else:
+                elif answer2 == ("n") or answer2 == ("N")  :
                     print(emoji.emojize("ok! have good day :red_heart:", variant="emoji_type"))
                     break
             else :
@@ -41,5 +41,5 @@ if answer == "y" :
         except Exception as e :
             print(f'error : {e}')
         time.sleep(5)
-else : 
+elif answer == ("n") or answer == ("N") :
     print(emoji.emojize("ok! have good day :red_heart:", variant="emoji_type"))
